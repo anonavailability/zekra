@@ -1,0 +1,7 @@
+version: '3'
+services:
+  zekra:
+    build: .
+    volumes:
+      - ./:/usr/src/input
+    command: ./libsnark/jsnark_interface/run_ppzksnark /usr/src/input/zekra.arith /usr/src/input/zekra_Sample_Run1.in /usr/src/input/pk_file /usr/src/input/vk_file /usr/src/input/proof_file
